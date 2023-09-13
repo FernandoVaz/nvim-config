@@ -2,6 +2,8 @@
 -- %s/text_you_wanna_find(/text_that_will_replace)
 
 vim.g.mapleader = " "
+vim.g.leetcode_browser = 'chrome'
+
 vim.keymap.set("n", "<leader>fv", vim.cmd.Ex)
 
 -- Move while highlighted

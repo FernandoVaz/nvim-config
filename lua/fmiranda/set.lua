@@ -1,6 +1,5 @@
 vim.opt.termguicolors = true
-vim.cmd.colorscheme 'melange'
-vim.opt.colorcolumn = "80"
+vim.opt.colorcolumn = "150"
 
 vim.opt.guicursor = ""
 
