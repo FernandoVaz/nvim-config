@@ -12,10 +12,10 @@ return require('packer').startup(function(use)
     }
 
     use({
-        'savq/melange-nvim',
-        as = 'melange',
+        use 'navarasu/onedark.nvim',
+        as = 'onedark',
         config = function()
-            vim.cmd('colorscheme melange')
+            vim.cmd('colorscheme onedark')
         end
     })
 
