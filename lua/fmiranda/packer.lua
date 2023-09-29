@@ -11,11 +11,16 @@ return require('packer').startup(function(use)
         requires = { {'nvim-lua/plenary.nvim'} }
     }
 
+    use {
+        "christoomey/vim-tmux-navigator",
+        lazy=false
+    }
+
     use({
-        use 'navarasu/onedark.nvim',
-        as = 'onedark',
+        'rose-pine/neovim',
+        as = 'rose-pine',
         config = function()
-            vim.cmd('colorscheme onedark')
+            vim.cmd('colorscheme rose-pine')
         end
     })
 

@@ -43,7 +43,12 @@ vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><
 vim.keymap.set("n", "<leader>x", "<cmd>!chmod +x %<CR>", { silent = true })
 
 vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/theprimeagen/packer.lua<CR>");
-vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
+
+vim.keymap.set("n","<leader>rws", function()
+    local save = vim.fn.winsaveview()
+    vim.cmd('%s/\\s\\+$//e')
+    vim.fn.winrestview(save)
+end)
 
 vim.keymap.set("n","<leader>rws", function()
     local save = vim.fn.winsaveview()
